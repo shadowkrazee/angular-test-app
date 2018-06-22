@@ -15,7 +15,7 @@ export class ShockboxComponent implements OnInit {
 	ngOnInit() {
 		// this.canvas = document.getElementById('canvas');
 		this.ctx = this.canvasRef.nativeElement.getContext('2d');
-		//this.ctx.translate(0, this.canvasRef.nativeElement.height / 2);
+		// this.ctx.translate(0, this.canvasRef.nativeElement.height / 2);
 		this.strikeLightning();
 	}
 	strikeLightning() {
