@@ -1,0 +1,7 @@
+<h1 style="text-align:center;">
+	plaintext: {{this.plaintext}}</h1>
+<input type="text" id="plaintext" style="width:75%;height:25px;" [(ngModel)]="plaintext" name="plaintext" (change)="crypto('e')">
+
+<h1 style="text-align:center;">cyphertext: {{this.cyphertext}}</h1>
+<input type="text" id="cyphertext" style="width:75%;height:25px;" [(ngModel)]="cyphertext" name="cyphertext" (change)="crypto('d')">
+<br>
