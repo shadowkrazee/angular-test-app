@@ -95,7 +95,7 @@ export class CrypticComponent implements OnInit {
 		}
 		// calculating key B
 		console.log('key m:' + this.keyM);
-		this.keyB = Math.floor(Math.random() * this.keyM);
+		this.keyB = 1 + (Math.floor(Math.random() * this.keyM);
 		// calculate key X
 		for (let z = 1; z < this.keyM; z++) {
 			if ((this.keyA * z) % this.keyM === 1) {

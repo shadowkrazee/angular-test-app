@@ -11,11 +11,11 @@
 <br>
 <button style="margin:2em; " (click)="findKeys() ">New Keys</button>
 <h1 style=" text-align:center; ">
-	plaintext: {{this.plaintext}}</h1>
+	plaintext: "{{this.plaintext}}"</h1>
 <input type="text " id="plaintext " style="width:75%;height:25px; " [(ngModel)]="plaintext " name="plaintext
  " (change)="crypto( 'e') ">
 
-<h1 style="text-align:center; ">cyphertext: {{this.cyphertext}}</h1>
+<h1 style="text-align:center; ">cyphertext: "{{this.cyphertext}}"</h1>
 <input type="text " id="cyphertext " style="width:75%;height:25px; " [(ngModel)]="cyphertext " name="cyphertext
  " (change)="crypto( 'd') ">
 <br>
