@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CrypticComponent } from './components/cryptic/cryptic.component';
-import { ShockboxComponent } from './shockbox/shockbox.component';
+import { ShockboxComponent } from './components/shockbox/shockbox.component';
 
 @NgModule({
-  declarations: [AppComponent, CrypticComponent, ShockboxComponent],
-  imports: [BrowserModule, FormsModule],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent, CrypticComponent, ShockboxComponent],
+	imports: [BrowserModule, FormsModule],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule {}

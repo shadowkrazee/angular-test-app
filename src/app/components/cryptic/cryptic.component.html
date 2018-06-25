@@ -1,7 +1,29 @@
-<h1 style="text-align:center;">
-	plaintext: {{this.plaintext}}</h1>
-<input type="text" id="plaintext" style="width:75%;height:25px;" [(ngModel)]="plaintext" name="plaintext" (change)="crypto('e')">
-
-<h1 style="text-align:center;">cyphertext: {{this.cyphertext}}</h1>
-<input type="text" id="cyphertext" style="width:75%;height:25px;" [(ngModel)]="cyphertext" name="cyphertext" (change)="crypto('d')">
+<p style="text-align:center;">current keys are shown below.</p>
+<label>
+	Key A: </label>
+<input type="text" style="width:2.5em;" [(ngModel)]="keyA" name="keyA">
+<label>
+	Key B: </label>
+<input type="text" style="width:2.5em;" [(ngModel)]="keyB" name="keyB">
+<label>
+	Key X: </label>
+<input type="text" style="width:2.5em;" [(ngModel)]="keyX" name="keyX">
 <br>
+<button style="margin:2em; " (click)="findKeys() ">New Keys</button>
+<h1 style=" text-align:center; ">
+	plaintext: {{this.plaintext}}</h1>
+<input type="text " id="plaintext " style="width:75%;height:25px; " [(ngModel)]="plaintext " name="plaintext
+ " (change)="crypto( 'e') ">
+
+<h1 style="text-align:center; ">cyphertext: {{this.cyphertext}}</h1>
+<input type="text " id="cyphertext " style="width:75%;height:25px; " [(ngModel)]="cyphertext " name="cyphertext
+ " (change)="crypto( 'd') ">
+<br>
+<button style="margin:2em; " (click)="findMatch() ">Find Match</button>
+<button style="margin:2em; " (click)="reset() ">Reset</button>
+<p style="text-align:center; ">number of loops until match: {{loops}} </p>
+<h2>Attempts are listed below:</h2>
+<hr>
+<ul>
+	<li *ngFor="let try of tries ">{{ try }}</li>
+</ul>
