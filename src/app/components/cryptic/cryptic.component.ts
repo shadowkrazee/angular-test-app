@@ -77,9 +77,9 @@ export class CrypticComponent implements OnInit {
 			this.keyA = 2;
 		} else {
 			this.keyA++;
-			var goodKey = false;
+			let goodKey = false;
 			while (!goodKey) {
-				let Afactors = this.getFactors(this.keyA);
+				const Afactors = this.getFactors(this.keyA);
 				let commonfactor = false;
 				Afactors.forEach(element => {
 					if (Mfactors.indexOf(element) > -1) {
@@ -95,7 +95,7 @@ export class CrypticComponent implements OnInit {
 		}
 		// calculating key B
 		console.log('key m:' + this.keyM);
-		this.keyB = 1 + (Math.floor(Math.random() * this.keyM);
+		this.keyB = 1 + Math.floor(Math.random() * (this.keyM - 1));
 		// calculate key X
 		for (let z = 1; z < this.keyM; z++) {
 			if ((this.keyA * z) % this.keyM === 1) {
@@ -104,7 +104,7 @@ export class CrypticComponent implements OnInit {
 		}
 	}
 	getFactors(num: number) {
-		var factors: number[] = [];
+		const factors: number[] = [];
 		for (let i = 1; i <= num; i++) {
 			if (num % i === 0 && i !== 1 && i !== num) {
 				factors.push(i);
@@ -168,8 +168,8 @@ export class CrypticComponent implements OnInit {
 			this.first = false;
 		}
 		this.loops = 0;
-		var current;
-		var match = false;
+		let current;
+		let match = false;
 		while (!match) {
 			this.crypto('e');
 			current = this.cyphertext;
